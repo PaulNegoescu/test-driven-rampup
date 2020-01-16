@@ -1,0 +1,14 @@
+{
+  "name": "test-driven-learning",
+  "version": "1.0.0",
+  "description": "Learn JS the test-driven way",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
