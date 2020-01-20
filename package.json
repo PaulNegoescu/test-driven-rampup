@@ -4,11 +4,14 @@
   "description": "Learn JS the test-driven way",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "concurrently 'jest --watch' 'light-server --serve ./jest-stare --open -w \"jest-stare/index.html\"'"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "concurrently": "^5.0.2",
+    "jest": "^24.9.0",
+    "jest-stare": "^1.26.0",
+    "light-server": "^2.6.4"
   }
 }

@@ -97,7 +97,7 @@ module.exports = {
   // projects: null,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+  reporters: ["default", "jest-stare"],
 
   // Automatically reset mock state between every test
   // resetMocks: false,
@@ -181,7 +181,9 @@ module.exports = {
   // verbose: null,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
-  // watchPathIgnorePatterns: [],
+  watchPathIgnorePatterns: [
+    ".*jest-stare.*\\.js"
+  ],
 
   // Whether to use watchman for file crawling
   // watchman: true,

@@ -19,7 +19,7 @@ describe('Reverses a string', () => {
 
 describe('Checks for a palindrome', () => {
   test('Simple string', () => {
-    expect(task.isPalindrome('tacocat')).toBe(true);
+    expect(task.isPalindrome('tacoocat')).toBe(true);
   });
   
   test('Ignore capital letters', () => {
@@ -59,15 +59,15 @@ describe("Can reverse a number", () => {
 
 describe('Returns fizz buzz', () => {
   test('Up to ten', () => {
-    expect(task.fizzBuzz(10)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'buzz']);
+    expect(task.fizzBuzz(10)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz']);
   });
 
   test('Up to eighteen', () => {
-    expect(task.fizzBuzz(18)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'buzz',11,'fizz',13,14,'fizzbuzz',16,17,'fizz']);
+    expect(task.fizzBuzz(18)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz', 'buzz',11,'fizz',13,14,'fizzbuzz',16,17,'fizz']);
   });
 
   test('Any divisor', () => {
-    expect(task.fizzBuzz(15,7,2)).toEqual([1,'buzz',3,'buzz',5,'buzz','fizz','buzz',9,'buzz',11,'buzz',13,'fizzbuzz']);
+    expect(task.fizzBuzz(15,7,2)).toEqual([1,'buzz',3,'buzz',5,'buzz','fizz','buzz',9,'buzz',11,'buzz',13,'fizzbuzz',15]);
   })
 });
 
