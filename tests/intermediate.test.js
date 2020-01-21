@@ -1,17 +1,17 @@
-const task = require('../src/intermediate');
+import {tasks} from '../src/intermediate.js'
 
 describe('Reverses a string', () => {
   test('With no special characters', () => {
-    expect(task.reverseString('HelloWorld')).toBe('dlroWolleH');
+    expect(tasks.reverseString('HelloWorld')).toBe('dlroWolleH');
   });
   
   test('With special characters', () => {
-    expect(task.reverseString('Hello World! 123')).toBe('321 !dlroW olleH');
+    expect(tasks.reverseString('Hello World! 123')).toBe('321 !dlroW olleH');
   });
 
   test('Does not call array reverse', () => {
     const reverseSpy = jest.spyOn(Array.prototype, 'reverse');
-    task.reverseString('HelloWorld');
+    tasks.reverseString('HelloWorld');
     
     expect(reverseSpy).not.toHaveBeenCalled();
   });
@@ -19,55 +19,55 @@ describe('Reverses a string', () => {
 
 describe('Checks for a palindrome', () => {
   test('Simple string', () => {
-    expect(task.isPalindrome('tacoocat')).toBe(true);
+    expect(tasks.isPalindrome('tacoocat')).toBe(true);
   });
   
   test('Ignore capital letters', () => {
-    expect(task.isPalindrome('TacoCat')).toBe(true);
+    expect(tasks.isPalindrome('TacoCat')).toBe(true);
   });
   
   test('Returns false when not a palindrome', () => {
-    expect(task.isPalindrome('Hello World')).toBe(false);
+    expect(tasks.isPalindrome('Hello World')).toBe(false);
   });
   
   test('Expert - Ignore spaces', () => {
-    expect(task.isPalindrome('Taco Cat')).toBe(true);
+    expect(tasks.isPalindrome('Taco Cat')).toBe(true);
   });
   
   test('Expert - Don\'t ignore other special characters', () => {
-    expect(task.isPalindrome('Taco Cat!')).toBe(false);
+    expect(tasks.isPalindrome('Taco Cat!')).toBe(false);
   });
 });
 
 describe("Can reverse a number", () => {
   test('Simple number', () => {
-    expect(task.reverseNumber(123)).toBe(321);
+    expect(tasks.reverseNumber(123)).toBe(321);
   });
   
   test('Numeric string', () => {
-    expect(task.reverseNumber('123')).toBe(321);
+    expect(tasks.reverseNumber('123')).toBe(321);
   });
 
   test('Decimal number', () => {
-    expect(task.reverseNumber(1.23)).toBe(32.1);
+    expect(tasks.reverseNumber(1.23)).toBe(32.1);
   });
 
   test('Negative number, preserve sign', () => {
-    expect(task.reverseNumber(-123)).toBe(-321);
+    expect(tasks.reverseNumber(-123)).toBe(-321);
   });
 });
 
 describe('Returns fizz buzz', () => {
   test('Up to ten', () => {
-    expect(task.fizzBuzz(10)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz']);
+    expect(tasks.fizzBuzz(10)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz','buzz']);
   });
 
   test('Up to eighteen', () => {
-    expect(task.fizzBuzz(18)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz', 'buzz',11,'fizz',13,14,'fizzbuzz',16,17,'fizz']);
+    expect(tasks.fizzBuzz(18)).toEqual([1,2,'fizz',4,'buzz','fizz',7,8,'fizz', 'buzz',11,'fizz',13,14,'fizzbuzz',16,17,'fizz']);
   });
 
   test('Any divisor', () => {
-    expect(task.fizzBuzz(15,7,2)).toEqual([1,'buzz',3,'buzz',5,'buzz','fizz','buzz',9,'buzz',11,'buzz',13,'fizzbuzz',15]);
+    expect(tasks.fizzBuzz(15,7,2)).toEqual([1,'buzz',3,'buzz',5,'buzz','fizz','buzz',9,'buzz',11,'buzz',13,'fizzbuzz',15]);
   })
 });
 

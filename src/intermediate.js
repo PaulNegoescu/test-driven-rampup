@@ -25,6 +25,7 @@ function isPalindrome(str) {
 
 }
 
+
 /*
   This function receives a number and returns the reversed number.
 
@@ -37,7 +38,7 @@ function isPalindrome(str) {
   3. Expert - Can handle negative numbers by keeping the sign of the resulting number: -123 => -321
 */
 function reverseNumber(num) {
-
+  
 }
 
 /*
@@ -51,12 +52,12 @@ function reverseNumber(num) {
   only one param is specifiied continue to consider fizz 3 and buzz 5)
 */
 function fizzBuzz(num) {
-
+  
 }
 
-module.exports = {
+export const tasks = {
   reverseString,
   isPalindrome,
   reverseNumber,
   fizzBuzz
-}
+};
